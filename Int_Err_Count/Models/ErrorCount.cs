@@ -5,7 +5,7 @@ namespace Int_Err_Count.Models
 {
     public class ErrorCount
     {
-        [Key]
+        //[Key]
         public string Id_Name { get; set; }
         public DateTime Date { get; set; }
         public int MASTIntegration_Shipment { get; set; }
