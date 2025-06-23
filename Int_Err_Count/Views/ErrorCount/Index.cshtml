@@ -1,0 +1,29 @@
+﻿@model Int_Err_Count.Models.ErrorCountViewModel;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+   
+}
+
+<a href="@Url.Action("AddForm","ErrorCount")" class="btn btn-success" style="float:right;margin-bottom:10px">Add Data</a>
+
+<table class="table table-bordered">
+   <tr>
+       <th>ID</th>
+       <th>Date</th>
+        <th>Mast</th>
+        <th>OneVision</th>
+        <th>RP</th>
+   </tr>
+    @foreach (var item in Model.ErrorCounts)
+    {
+        <tr>
+            <td>@item.Id_Name</td>
+            <td>@item.Date.ToString("dd MMM yyyy")</td>
+            <td>@item.MASTIntegration_Shipment</td>
+            <td>@item.OneVision_B2BASN</td>
+            <td>@item.RPIntegration_US_ExceptionReport</td>
+        </tr>
+    }
+</table>
