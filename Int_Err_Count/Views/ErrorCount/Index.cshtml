@@ -20,9 +20,9 @@
                 <tr>
                     <th><i class="fas fa-id-badge"></i> ID</th>
                     <th><i class="far fa-calendar-alt"></i> Date</th>
-                    <th><i class="fas fa-ship"></i> Mast</th>
-                    <th><i class="fas fa-eye"></i> OneVision</th>
-                    <th><i class="fas fa-exclamation-triangle"></i> RP</th>
+                    <th>Mast</th>
+                    <th>OneVision</th>
+                    <th> RP</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,9 +31,9 @@
                     <tr class="table-row">
                         <td>@item.Id_Name</td>
                         <td>@item.Date.ToString("dd MMM yyyy")</td>
-                        <td class="@GetCellClass(item.MASTIntegration_Shipment)">@item.MASTIntegration_Shipment</td>
-                        <td class="@GetCellClass(item.OneVision_B2BASN)">@item.OneVision_B2BASN</td>
-                        <td class="@GetCellClass(item.RPIntegration_US_ExceptionReport)">@item.RPIntegration_US_ExceptionReport</td>
+                        <td>@item.MASTIntegration_Shipment</td>
+                        <td>@item.OneVision_B2BASN</td>
+                        <td>@item.RPIntegration_US_ExceptionReport</td>
                     </tr>
                 }
             </tbody>
@@ -41,14 +41,7 @@
     </div>
 </div>
 
-@functions {
-    string GetCellClass(int value) {
-        if (value > 50) return "high-error";
-        if (value > 20) return "medium-error";
-        if (value > 0) return "low-error";
-        return "no-error";
-    }
-}
+
 
 <style>
     /* Vibrant Color Scheme */
